@@ -28,7 +28,7 @@ function update()
     var frame = (Math.floor(time * 2) / 2) % 8;
     frame = clamp(frame, 0, 2);
     if(frame == 0)ctx.drawImage(head0, 0, x);
-    if(frame == 1)ctx.drawImage(head1, 0 x);
+    if(frame == 1)ctx.drawImage(head1, 0, x);
     if(frame == 2)ctx.drawImage(head2, 0, x);
 }
 
