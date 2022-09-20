@@ -1,5 +1,10 @@
 var cvs = document.getElementById("cvs");
 var ctx = cvs.getContext("2d");
+
+var head0 = document.getElementById("head0");
+var head1 = document.getElementById("head1");
+var head2 = document.getElementById("head2");
+
 var time = 0;
 
 function clear()
@@ -22,9 +27,9 @@ function update()
     var x = (Math.sin(time / 4) + 1) * 40;
     var frame = (Math.floor(time * 2) / 2) % 8;
     frame = clamp(frame, 0, 2);
-    if(frame == 0)ctx.drawImage("./images/head_0.png", 0, x);
-    if(frame == 1)ctx.drawImage("./images/head_1.png", 0, x);
-    if(frame == 2)ctx.drawImage("./images/head_2.png", 0, x);
+    if(frame == 0)ctx.drawImage(head0, 0, x);
+    if(frame == 1)ctx.drawImage(head1, 0 x);
+    if(frame == 2)ctx.drawImage(head2, 0, x);
 }
 
 setInterval(update, 1 / 60);
