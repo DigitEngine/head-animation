@@ -6,6 +6,7 @@ var head1 = document.getElementById("head1");
 var head2 = document.getElementById("head2");
 
 var time = 0;
+var frame = 0;
 
 function clear()
 {
@@ -26,9 +27,10 @@ function update()
     time += 1 / 60;
     var x = (Math.sin(time / 4) + 1) * 40;
     ctx.drawImage(head0, 0, 0);
-    //if(frame == 0)ctx.drawImage(head0, 0, x);
-    //if(frame == 1)ctx.drawImage(head1, 0, x);
-    //if(frame == 2)ctx.drawImage(head2, 0, x);
+    frame = (Math.floor(time * 2) / 2) % 8;
+    if(frame == 0)ctx.drawImage(head0, 0, x);
+    if(frame == 1)ctx.drawImage(head1, 0, x);
+    if(frame >= 2)ctx.drawImage(head2, 0, x);
 }
 
 setInterval(update, 1 / 60);
