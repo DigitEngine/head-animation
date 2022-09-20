@@ -23,7 +23,7 @@ function clamp(x, y, z)
 
 function update()
 {
-    //clear();
+    clear();
     time += 1 / 60;
     var x = (Math.sin(time / 4) + 1) * 40;
     ctx.drawImage(head0, 0, 0);
