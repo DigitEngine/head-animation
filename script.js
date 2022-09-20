@@ -33,10 +33,10 @@ function update()
         frame++;
         time2 = 0;
     }
-    if(frame >= 8)frame = 0;
-    if(frame == 0)ctx.drawImage(head0, 0, x);
+    if(frame >= 12)frame = 0;
+    if(frame == 0)ctx.drawImage(head2, 0, x);
     if(frame == 1)ctx.drawImage(head1, 0, x);
-    if(frame >= 2)ctx.drawImage(head2, 0, x);
+    if(frame >= 2)ctx.drawImage(head0, 0, x);
 }
 
 setInterval(update, 1 / 60);
